@@ -13,7 +13,12 @@ public class LinkCounterBolt extends BaseBasicBolt {
   @Override
   public void execute(Tuple tuple, BasicOutputCollector collector) {
     String title = tuple.getString(0);
-    collector.emit(new Values(title, 4, 5));
+    String body = tuple.getString(1);
+    String no_int_body = body.replaceAll("\\[\\[", "");
+    String no_ext_body = no_int_body.replaceAll("\\[", "");
+    int int_links = (body.length() - no_int_body.length()) / 2;
+    int ext_links = no_int_body.length() - no_ext_body.length();
+    collector.emit(new Values(title, int_links, ext_links));
   }
 
   @Override
