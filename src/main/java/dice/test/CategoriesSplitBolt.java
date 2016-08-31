@@ -7,14 +7,16 @@ import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Tuple;
 import org.apache.storm.tuple.Values;
 
+import java.util.HashSet;
+
 
 public class CategoriesSplitBolt extends BaseBasicBolt {
 
   @Override
   public void execute(Tuple tuple, BasicOutputCollector collector) {
     String title = tuple.getString(0);
-    String category = tuple.getString(1).replace("{", "").replace("}", "");
-    for (String cat : category.split(","))
+    HashSet<String> categories = (HashSet<String>)tuple.getValue(1);
+    for (String cat : categories)
       collector.emit(new Values(cat, title));
   }
 
