@@ -111,7 +111,16 @@ public class WikiTopology {
     conf.setNumWorkers(5);
     conf.put("cassandra.keyspace", KEYSPACE);
     conf.put("wiki.dump.address", args[2]);
+
+    /* If running on the cluster, use next line */
     StormSubmitter.submitTopology(args[0], conf, buildTopology());
+
+    /* If running locally, comment cluster line and uncomment lines below */
+    //LocalCluster cluster = new LocalCluster();
+    //cluster.submitTopology(args[0], conf, buildTopology());
+    //Thread.sleep(10000);
+    //cluster.killTopology(args[0]);
+    //cluster.shutdown();
 
     // TODO: Not sure why application hangs at the end if this is not present.
     System.exit(0);
