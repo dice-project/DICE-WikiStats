@@ -110,6 +110,7 @@ public class WikiTopology {
     Config conf = new Config();
     conf.setNumWorkers(5);
     conf.put("cassandra.keyspace", KEYSPACE);
+    conf.put("cassandra.nodes", args[1]);
     conf.put("wiki.dump.address", args[2]);
 
     /* If running on the cluster, use next line */
