@@ -11,7 +11,7 @@ node_templates:
   zookeeper_vm:
     type: dice.hosts.Medium
     instances:
-      deploy: 3
+      deploy: 1
     relationships:
       - type: dice.relationships.ProtectedBy
         target: zookeeper_security_group
@@ -116,7 +116,7 @@ node_templates:
   wordcount:
     type: dice.components.storm.Topology
     properties:
-      application: wikistats-topology-0.1.0-SNAPSHOT.jar
+      application: lib/wikistats-topology-0.1.0-SNAPSHOT.jar
       topology_name: wikistats
       topology_class: dice.test.WikiTopology
       arguments:

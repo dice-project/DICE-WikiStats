@@ -1,1 +1,6 @@
 target
+.dds.conf
+.dds.log
+bin
+lib
+project.dice-delivery
