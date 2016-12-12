@@ -113,7 +113,7 @@ node_templates:
         target: cassandra_seed
 
   # Topology
-  wordcount:
+  wikistats:
     type: dice.components.storm.Topology
     properties:
       application: lib/wikistats-topology-0.1.0-SNAPSHOT.jar
