@@ -70,6 +70,7 @@ node_templates:
     relationships:
     - {target: storm_nimbus, type: dice.relationships.storm.SubmittedBy}
     - {target: storm_vm2_supervisor, type: dice.relationships.Needs}
+    - {target: cassandra_vm2_worker, type: dice.relationships.Needs}
     type: dice.components.storm.Topology
   zookeeper_quorum:
     relationships:

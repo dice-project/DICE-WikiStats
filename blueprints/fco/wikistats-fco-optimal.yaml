@@ -186,6 +186,8 @@ node_templates:
         target: nimbus
       - type: dice.relationships.Needs
         target: storm
+      - type: dice.relationships.Needs
+        target: cassandra_worker
 
 
 outputs:
