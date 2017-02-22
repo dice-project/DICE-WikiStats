@@ -1,7 +1,7 @@
 tosca_definitions_version: cloudify_dsl_1_3
 
 imports:
-  - http://dice-project.github.io/DICE-Deployment-Cloudify/spec/openstack/0.2.4/plugin.yaml
+  - http://dice-project.github.io/DICE-Deployment-Cloudify/spec/openstack/tb-wip/plugin.yaml
 
 node_templates:
   # Zookeeper
@@ -52,6 +52,9 @@ node_templates:
 
   nimbus:
     type: dice.components.storm.Nimbus
+    properties:
+      monitoring:
+        enabled: true
     relationships:
       - type: dice.relationships.ContainedIn
         target: nimbus_vm
@@ -72,6 +75,9 @@ node_templates:
 
   storm:
     type: dice.components.storm.Worker
+    properties:
+      monitoring:
+        enabled: true
     relationships:
       - type: dice.relationships.ContainedIn
         target: storm_vm
@@ -84,7 +90,7 @@ node_templates:
   cassandra_security_group:
     type: dice.firewall_rules.cassandra.Common
 
-  cassandra_seed_vm:
+  cs_seed_vm:
     type: dice.hosts.Medium
     relationships:
       - type: dice.relationships.ProtectedBy
@@ -92,11 +98,14 @@ node_templates:
 
   cassandra_seed:
     type: dice.components.cassandra.Seed
+    properties:
+      monitoring:
+        enabled: true
     relationships:
       - type: dice.relationships.ContainedIn
-        target: cassandra_seed_vm
+        target: cs_seed_vm
 
-  cassandra_worker_vm:
+  cs_wrk_vm:
     type: dice.hosts.Medium
     instances:
       deploy: 3
@@ -106,9 +115,12 @@ node_templates:
 
   cassandra_worker:
     type: dice.components.cassandra.Worker
+    properties:
+      monitoring:
+        enabled: true
     relationships:
       - type: dice.relationships.ContainedIn
-        target: cassandra_worker_vm
+        target: cs_wrk_vm
       - type: dice.relationships.cassandra.ConnectedToSeed
         target: cassandra_seed
 
@@ -116,12 +128,14 @@ node_templates:
   wikistats:
     type: dice.components.storm.Topology
     properties:
+      monitoring:
+        enabled: true
       application: lib/wikistats-topology-0.1.0-SNAPSHOT.jar
       topology_name: wikistats
       topology_class: dice.test.WikiTopology
       arguments:
-        - { get_attribute: [cassandra_seed_vm, ip] }
-        - https://dumps.wikimedia.org/enwiki/20160820/enwiki-20160820-pages-articles1.xml-p000000010p000030302.bz2
+        - { get_attribute: [cs_seed_vm, ip] }
+        - https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles1.xml-p000000010p000030302.bz2
     relationships:
       - type: dice.relationships.storm.SubmittedBy
         target: nimbus
