@@ -4,3 +4,7 @@ target
 bin
 lib
 project.dice-delivery
+.classpath
+.project
+.settings
+deploys.json
