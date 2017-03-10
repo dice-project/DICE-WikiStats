@@ -130,7 +130,7 @@ node_templates:
     properties:
       monitoring:
         enabled: true
-      application: lib/wikistats-topology-0.1.0-SNAPSHOT.jar
+      application: wikistats-topology-0.1.0-SNAPSHOT.jar
       topology_name: wikistats
       topology_class: dice.test.WikiTopology
       arguments:
