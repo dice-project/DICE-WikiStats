@@ -131,6 +131,19 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_F90coAdZEeebV_ghsGgJ4A" client="_6RCwELZREeaUv6b48c781A" supplier="_3Yd80AdYEeebV_ghsGgJ4A"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_3Wa8IAddEeebV_ghsGgJ4A" client="_5om38OsTEeaNqaUKwX9hUw" supplier="_ztNZwAddEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Xmll8AdgEeebV_ghsGgJ4A" name="Wikimedia">
+      <nestedClassifier xmi:type="uml:DataType" xmi:id="_frpokAdgEeebV_ghsGgJ4A" name="WikimediaPages"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZYUpUAdgEeebV_ghsGgJ4A" name="WikistatsApplication"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_c9upwAdgEeebV_ghsGgJ4A" name="InternalDatastore_1">
+      <nestedClassifier xmi:type="uml:DataType" xmi:id="_knpBcAdgEeebV_ghsGgJ4A" name="CategoriesPerPage"/>
+      <nestedClassifier xmi:type="uml:DataType" xmi:id="_lkaLsAdgEeebV_ghsGgJ4A" name="PagesPerCategory"/>
+      <nestedClassifier xmi:type="uml:DataType" xmi:id="_hT-4UAdgEeebV_ghsGgJ4A" name="LinksPerPage"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_8I8voAdgEeebV_ghsGgJ4A" informationSource="_frpokAdgEeebV_ghsGgJ4A" informationTarget="_ZYUpUAdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_8-LHcAdgEeebV_ghsGgJ4A" informationSource="_ZYUpUAdgEeebV_ghsGgJ4A" informationTarget="_hT-4UAdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_9aXUMAdgEeebV_ghsGgJ4A" informationSource="_ZYUpUAdgEeebV_ghsGgJ4A" informationTarget="_lkaLsAdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_97SP8AdgEeebV_ghsGgJ4A" informationSource="_ZYUpUAdgEeebV_ghsGgJ4A" informationTarget="_knpBcAdgEeebV_ghsGgJ4A"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_U1npsLZMEeaUv6b48c781A">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U1oQwLZMEeaUv6b48c781A" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://es.unizar.disco.dice/profiles/DICE/1.0#//DDSM"/>
@@ -437,4 +450,7 @@
   <DDSM:DdsmVMsCluster xmi:id="_TBE3kAdZEeebV_ghsGgJ4A" base_Device="_0_nPEAdYEeebV_ghsGgJ4A"/>
   <DDSM:DdsmVMsCluster xmi:id="_UeDy8AdZEeebV_ghsGgJ4A" base_Device="_WY4Z8LZREeaUv6b48c781A"/>
   <DDSM:DdsmZookeeperCluster xmi:id="_2489AAddEeebV_ghsGgJ4A" base_Node="_ztNZwAddEeebV_ghsGgJ4A" protected="true"/>
+  <DPIM:DpimSourceNode xmi:id="_B8UccAdhEeebV_ghsGgJ4A" base_Classifier="_Xmll8AdgEeebV_ghsGgJ4A"/>
+  <DPIM:DpimStorageNode xmi:id="_DjCioAdhEeebV_ghsGgJ4A" base_Classifier="_c9upwAdgEeebV_ghsGgJ4A"/>
+  <DPIM:DpimComputationNode xmi:id="_E4_B4AdhEeebV_ghsGgJ4A" base_Classifier="_ZYUpUAdgEeebV_ghsGgJ4A"/>
 </xmi:XMI>
