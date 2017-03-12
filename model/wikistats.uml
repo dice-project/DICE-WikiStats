@@ -31,20 +31,20 @@
       <edge xmi:type="uml:ControlFlow" xmi:id="_QrR1ALrSEea9a9xTRmpT8g" target="_aMF5YLrREea9a9xTRmpT8g" source="_4hzTkLrREea9a9xTRmpT8g"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_3TocYOJGEeaAL8m_PtOKUg" target="_MpW3sLrSEea9a9xTRmpT8g" source="_y82wwOJDEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_gwqJQOJHEeaAL8m_PtOKUg" target="_8nEE4OJGEeaAL8m_PtOKUg" source="_aMF5YLrREea9a9xTRmpT8g"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_hTphkOJHEeaAL8m_PtOKUg" target="_AD274OJHEeaAL8m_PtOKUg" source="_aMF5YLrREea9a9xTRmpT8g"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_hTphkOJHEeaAL8m_PtOKUg" target="_AD274OJHEeaAL8m_PtOKUg" source="_8nEE4OJGEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_hxeGAOJHEeaAL8m_PtOKUg" target="_rl_JgOJGEeaAL8m_PtOKUg" source="_8nEE4OJGEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_iIuIYOJHEeaAL8m_PtOKUg" target="_B6cDAOJHEeaAL8m_PtOKUg" source="_AD274OJHEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_igfIIOJHEeaAL8m_PtOKUg" target="_EekMoOJHEeaAL8m_PtOKUg" source="_B6cDAOJHEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_i87zkOJHEeaAL8m_PtOKUg" target="_ppb3cOoAEeaAaJWhAAe-Ag" source="_EekMoOJHEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_jaLJMOJHEeaAL8m_PtOKUg" target="_pM0z8OoAEeaAaJWhAAe-Ag" source="_rl_JgOJGEeaAL8m_PtOKUg"/>
       <group xmi:type="uml:ActivityPartition" xmi:id="__1rmULrQEea9a9xTRmpT8g" name="WikistatsApplication" node="_aMF5YLrREea9a9xTRmpT8g _wfUD0LrREea9a9xTRmpT8g _y82wwOJDEeaAL8m_PtOKUg _rl_JgOJGEeaAL8m_PtOKUg _8nEE4OJGEeaAL8m_PtOKUg _AD274OJHEeaAL8m_PtOKUg _B6cDAOJHEeaAL8m_PtOKUg _EekMoOJHEeaAL8m_PtOKUg" represents="_WY4Z8LZREeaUv6b48c781A"/>
-      <node xmi:type="uml:OpaqueAction" xmi:id="_aMF5YLrREea9a9xTRmpT8g" name="WikiArticleSpout" incoming="_QrR1ALrSEea9a9xTRmpT8g" outgoing="_1uISELrREea9a9xTRmpT8g _gwqJQOJHEeaAL8m_PtOKUg _hTphkOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_aMF5YLrREea9a9xTRmpT8g" name="WikiArticleSpout" incoming="_QrR1ALrSEea9a9xTRmpT8g" outgoing="_1uISELrREea9a9xTRmpT8g _gwqJQOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_wfUD0LrREea9a9xTRmpT8g" name="LinkCounterBolt" incoming="_1uISELrREea9a9xTRmpT8g" outgoing="_OKxnILrSEea9a9xTRmpT8g" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:InitialNode" xmi:id="_4hzTkLrREea9a9xTRmpT8g" outgoing="_QrR1ALrSEea9a9xTRmpT8g"/>
       <node xmi:type="uml:ActivityFinalNode" xmi:id="_MpW3sLrSEea9a9xTRmpT8g" name="final2" incoming="_3TocYOJGEeaAL8m_PtOKUg"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_y82wwOJDEeaAL8m_PtOKUg" name="LinksPerPageCassandraWriter" incoming="_OKxnILrSEea9a9xTRmpT8g" outgoing="_3TocYOJGEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_rl_JgOJGEeaAL8m_PtOKUg" name="CategoriesPerPageCassandraWriter" incoming="_hxeGAOJHEeaAL8m_PtOKUg" outgoing="_jaLJMOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
-      <node xmi:type="uml:OpaqueAction" xmi:id="_8nEE4OJGEeaAL8m_PtOKUg" name="CategoriesExtractBolt" incoming="_gwqJQOJHEeaAL8m_PtOKUg" outgoing="_hxeGAOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_8nEE4OJGEeaAL8m_PtOKUg" name="CategoriesExtractBolt" incoming="_gwqJQOJHEeaAL8m_PtOKUg" outgoing="_hxeGAOJHEeaAL8m_PtOKUg _hTphkOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_AD274OJHEeaAL8m_PtOKUg" name="CategoriesSplitBolt" incoming="_hTphkOJHEeaAL8m_PtOKUg" outgoing="_iIuIYOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_B6cDAOJHEeaAL8m_PtOKUg" name="CategoryAggrBolt" incoming="_iIuIYOJHEeaAL8m_PtOKUg" outgoing="_igfIIOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_EekMoOJHEeaAL8m_PtOKUg" name="PagesPerCategoryCassandraWriter" incoming="_igfIIOJHEeaAL8m_PtOKUg" outgoing="_i87zkOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
