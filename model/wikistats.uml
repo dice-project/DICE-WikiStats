@@ -124,13 +124,13 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_mIjy4OyLEeaCl4iuY56NpA" name="linksperpagecassandrawriter" type="_XMDxEOJIEeaAL8m_PtOKUg" association="_mIgvkOyLEeaCl4iuY56NpA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Device" xmi:id="_0hehkAdYEeebV_ghsGgJ4A" name="cluster2">
-      <nestedClassifier xmi:type="uml:Node" xmi:id="_rLXKYLZREeaUv6b48c781A" name="zookeeper_1"/>
+      <nestedNode xmi:type="uml:Node" xmi:id="_ztNZwAddEeebV_ghsGgJ4A" name="zookeeper_!"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Device" xmi:id="_0_nPEAdYEeebV_ghsGgJ4A" name="cluster3">
       <nestedNode xmi:type="uml:Node" xmi:id="_3Yd80AdYEeebV_ghsGgJ4A" name="cassandra_1"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_FSr08AdZEeebV_ghsGgJ4A" client="_5om38OsTEeaNqaUKwX9hUw" supplier="_rLXKYLZREeaUv6b48c781A"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_F90coAdZEeebV_ghsGgJ4A" client="_6RCwELZREeaUv6b48c781A" supplier="_3Yd80AdYEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_3Wa8IAddEeebV_ghsGgJ4A" client="_5om38OsTEeaNqaUKwX9hUw" supplier="_ztNZwAddEeebV_ghsGgJ4A"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_U1npsLZMEeaUv6b48c781A">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U1oQwLZMEeaUv6b48c781A" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://es.unizar.disco.dice/profiles/DICE/1.0#//DDSM"/>
@@ -366,7 +366,9 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://DICE_PROFILES/DICE.profile.uml#_MPXosOePEeWj7ZPL8JeBTQ"/>
     </profileApplication>
   </uml:Model>
-  <DDSM:DdsmBigDataJob xmi:id="_EYrHYLZSEeaUv6b48c781A" base_Artifact="_6RCwELZREeaUv6b48c781A"/>
+  <DDSM:DdsmBigDataJob xmi:id="_EYrHYLZSEeaUv6b48c781A" application="http://193.77.50.17/html/dice-wikistats/wikistats-topology-0.1.0-SNAPSHOT.jar" application_class="dice.test.WikiTopology" base_Artifact="_6RCwELZREeaUv6b48c781A" application_name="wikistats">
+    <arguments>https://dumps.wikimedia.org/enwiki/20160820/enwiki-20160820-pages-articles1.xml-p000000010p000030302.bz2</arguments>
+  </DDSM:DdsmBigDataJob>
   <Storm:StormApplication xmi:id="_7iBl0LcMEeafVIer1DLqBA" base_Classifier="_PEcGgLZSEeaUv6b48c781A"/>
   <Storm:StormScenarioTopology xmi:id="_8xYU4LcMEeafVIer1DLqBA" base_NamedElement="_QDyqsLZSEeaUv6b48c781A" base_Class="_QDyqsLZSEeaUv6b48c781A" queueThreshold="4" maxTaskParallelism="5" maxSpoutPending="2" isReliable="true"/>
   <Storm:StormSpout xmi:id="_9sCmULcMEeafVIer1DLqBA" base_NamedElement="_R3yX4LZSEeaUv6b48c781A" blockT="" base_Classifier="_R3yX4LZSEeaUv6b48c781A" parallelism="2" avgEmitRate="1"/>
@@ -430,9 +432,9 @@
   <GQAM:GaWorkloadEvent xmi:id="_kUY1oOoREeakp7y5t6-Yaw" pattern="open=(arrivalRate=(expr=5.0, unit=Hz, statQ=mean, source=est))" base_NamedElement="_aXzGIOoQEeakp7y5t6-Yaw"/>
   <GRM:Scheduler xmi:id="_3k_JQPv8Eea8zqLVRizDRA" base_Classifier="_6RCwELZREeaUv6b48c781A"/>
   <DDSM:DdsmCassandraCluster xmi:id="_Mcmd8AdZEeebV_ghsGgJ4A" base_Node="_3Yd80AdYEeebV_ghsGgJ4A" protected="true"/>
-  <DDSM:DdsmZookeeperCluster xmi:id="_OMgVUAdZEeebV_ghsGgJ4A" base_Node="_rLXKYLZREeaUv6b48c781A" protected="true"/>
   <DDSM:DdsmStormCluster xmi:id="_PyYuAAdZEeebV_ghsGgJ4A" base_Node="_5om38OsTEeaNqaUKwX9hUw" protected="true" base_ExecutionEnvironment="_5om38OsTEeaNqaUKwX9hUw"/>
   <DDSM:DdsmVMsCluster xmi:id="_Rs5S4AdZEeebV_ghsGgJ4A" base_Device="_0hehkAdYEeebV_ghsGgJ4A"/>
   <DDSM:DdsmVMsCluster xmi:id="_TBE3kAdZEeebV_ghsGgJ4A" base_Device="_0_nPEAdYEeebV_ghsGgJ4A"/>
   <DDSM:DdsmVMsCluster xmi:id="_UeDy8AdZEeebV_ghsGgJ4A" base_Device="_WY4Z8LZREeaUv6b48c781A"/>
+  <DDSM:DdsmZookeeperCluster xmi:id="_2489AAddEeebV_ghsGgJ4A" base_Node="_ztNZwAddEeebV_ghsGgJ4A" protected="true"/>
 </xmi:XMI>
