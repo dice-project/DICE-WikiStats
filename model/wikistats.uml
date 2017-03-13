@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DDSM="http://es.unizar.disco.dice/profiles/DDSM/1.0" xmlns:DPIM="http://es.unizar.disco.dice/profiles/DPIM/1.0" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:GRM="http://www.eclipse.org/papyrus/GRM/1" xmlns:Storm="http://es.unizar.disco.dice/profiles/DTSM/Storm/1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://es.unizar.disco.dice/profiles/DDSM/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//DDSM http://es.unizar.disco.dice/profiles/DPIM/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//DPIM http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM http://www.eclipse.org/papyrus/GRM/1 http://www.eclipse.org/papyrus/MARTE/1#//GRM http://es.unizar.disco.dice/profiles/DTSM/Storm/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//Storm">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DDSM="http://es.unizar.disco.dice/profiles/DDSM/1.0" xmlns:DPIM="http://es.unizar.disco.dice/profiles/DPIM/1.0" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:GRM="http://www.eclipse.org/papyrus/GRM/1" xmlns:SecureUML="http://RootElement/schemas/SecureUML/_zVWe83m5Eeae1LmHHETvPg/99" xmlns:Storm="http://es.unizar.disco.dice/profiles/DTSM/Storm/1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://es.unizar.disco.dice/profiles/DDSM/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//DDSM http://es.unizar.disco.dice/profiles/DPIM/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//DPIM http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM http://www.eclipse.org/papyrus/GRM/1 http://www.eclipse.org/papyrus/MARTE/1#//GRM http://RootElement/schemas/SecureUML/_zVWe83m5Eeae1LmHHETvPg/99 pathmap://SECUREUML_PROFILES/SecureUML.profile.uml#_zVWe9Hm5Eeae1LmHHETvPg http://es.unizar.disco.dice/profiles/DTSM/Storm/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//Storm">
   <uml:Model xmi:id="_HNAe8LZMEeaUv6b48c781A" name="RootElement">
     <packagedElement xmi:type="uml:Device" xmi:id="_WY4Z8LZREeaUv6b48c781A" name="cluster1">
       <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_5om38OsTEeaNqaUKwX9hUw" name="storm_1">
@@ -132,7 +132,7 @@
     <packagedElement xmi:type="uml:Dependency" xmi:id="_F90coAdZEeebV_ghsGgJ4A" client="_6RCwELZREeaUv6b48c781A" supplier="_3Yd80AdYEeebV_ghsGgJ4A"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_3Wa8IAddEeebV_ghsGgJ4A" client="_5om38OsTEeaNqaUKwX9hUw" supplier="_ztNZwAddEeebV_ghsGgJ4A"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_Xmll8AdgEeebV_ghsGgJ4A" name="Wikimedia">
-      <nestedClassifier xmi:type="uml:DataType" xmi:id="_frpokAdgEeebV_ghsGgJ4A" name="WikimediaPages"/>
+      <nestedClassifier xmi:type="uml:DataType" xmi:id="_3sLuwAdzEeebV_ghsGgJ4A" name="WikimediaPage"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_ZYUpUAdgEeebV_ghsGgJ4A" name="WikistatsApplication"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_c9upwAdgEeebV_ghsGgJ4A" name="InternalDatastore_1">
@@ -140,10 +140,54 @@
       <nestedClassifier xmi:type="uml:DataType" xmi:id="_lkaLsAdgEeebV_ghsGgJ4A" name="PagesPerCategory"/>
       <nestedClassifier xmi:type="uml:DataType" xmi:id="_hT-4UAdgEeebV_ghsGgJ4A" name="LinksPerPage"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_8I8voAdgEeebV_ghsGgJ4A" informationSource="_frpokAdgEeebV_ghsGgJ4A" informationTarget="_ZYUpUAdgEeebV_ghsGgJ4A"/>
-    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_8-LHcAdgEeebV_ghsGgJ4A" informationSource="_ZYUpUAdgEeebV_ghsGgJ4A" informationTarget="_hT-4UAdgEeebV_ghsGgJ4A"/>
-    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_9aXUMAdgEeebV_ghsGgJ4A" informationSource="_ZYUpUAdgEeebV_ghsGgJ4A" informationTarget="_lkaLsAdgEeebV_ghsGgJ4A"/>
-    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_97SP8AdgEeebV_ghsGgJ4A" informationSource="_ZYUpUAdgEeebV_ghsGgJ4A" informationTarget="_knpBcAdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_97SP8AdgEeebV_ghsGgJ4A" informationSource="_ZYUpUAdgEeebV_ghsGgJ4A" informationTarget="_knpBcAdgEeebV_ghsGgJ4A _c9upwAdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SSeKgAdsEeebV_ghsGgJ4A" name="Bob"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TBqy0AdsEeebV_ghsGgJ4A" name="Admin">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GfVAsAd5Eeet-dyYFRXIfQ" name="wikimediapage" type="_3sLuwAdzEeebV_ghsGgJ4A" association="_GfTLgAd5Eeet-dyYFRXIfQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ICW5sgd5Eeet-dyYFRXIfQ" name="linksperpage" type="_hT-4UAdgEeebV_ghsGgJ4A" association="_ICWSoAd5Eeet-dyYFRXIfQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IgnjAgd5Eeet-dyYFRXIfQ" name="pagespercategory" type="_lkaLsAdgEeebV_ghsGgJ4A" association="_IgmU4Ad5Eeet-dyYFRXIfQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JBfbcgd5Eeet-dyYFRXIfQ" name="categoriesperpage" type="_knpBcAdgEeebV_ghsGgJ4A" association="_JBeNUAd5Eeet-dyYFRXIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_WQ3dQAdtEeebV_ghsGgJ4A" client="_SSeKgAdsEeebV_ghsGgJ4A" supplier="_TBqy0AdsEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_hkph0AdxEeebV_ghsGgJ4A" informationSource="_Xmll8AdgEeebV_ghsGgJ4A" informationTarget="_ZYUpUAdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_im9zEAd0EeebV_ghsGgJ4A" client="_3sLuwAdzEeebV_ghsGgJ4A" supplier="_hkph0AdxEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_jrOFYAd0EeebV_ghsGgJ4A" client="_hT-4UAdgEeebV_ghsGgJ4A" supplier="_97SP8AdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_kEnc0Ad0EeebV_ghsGgJ4A" client="_lkaLsAdgEeebV_ghsGgJ4A" supplier="_97SP8AdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_nNWvYAd0EeebV_ghsGgJ4A" client="_knpBcAdgEeebV_ghsGgJ4A" supplier="_97SP8AdgEeebV_ghsGgJ4A"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_MTHZsAd4Eeet-dyYFRXIfQ" name="Wikimedia_actions">
+      <packagedElement xmi:type="uml:Class" xmi:id="_lMzQEAd4Eeet-dyYFRXIfQ" name="get_page"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_PHMq4Ad4Eeet-dyYFRXIfQ" name="InternalDatastore_1_actions">
+      <packagedElement xmi:type="uml:Class" xmi:id="_QdEHEAd3Eeet-dyYFRXIfQ" name="create"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_J65lIAd4Eeet-dyYFRXIfQ" name="read"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_I0QGIAd4Eeet-dyYFRXIfQ" name="update"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_k7VGkAdtEeebV_ghsGgJ4A" name="delete"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_GfTLgAd5Eeet-dyYFRXIfQ" memberEnd="_GfVAsAd5Eeet-dyYFRXIfQ _GfVAsQd5Eeet-dyYFRXIfQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GfUZoAd5Eeet-dyYFRXIfQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GfUZoQd5Eeet-dyYFRXIfQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_GfVAsQd5Eeet-dyYFRXIfQ" name="admin" type="_TBqy0AdsEeebV_ghsGgJ4A" association="_GfTLgAd5Eeet-dyYFRXIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ICWSoAd5Eeet-dyYFRXIfQ" memberEnd="_ICW5sgd5Eeet-dyYFRXIfQ _ICXgwAd5Eeet-dyYFRXIfQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ICW5sAd5Eeet-dyYFRXIfQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ICW5sQd5Eeet-dyYFRXIfQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ICXgwAd5Eeet-dyYFRXIfQ" name="admin" type="_TBqy0AdsEeebV_ghsGgJ4A" association="_ICWSoAd5Eeet-dyYFRXIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_IgmU4Ad5Eeet-dyYFRXIfQ" memberEnd="_IgnjAgd5Eeet-dyYFRXIfQ _IgoKEAd5Eeet-dyYFRXIfQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IgnjAAd5Eeet-dyYFRXIfQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IgnjAQd5Eeet-dyYFRXIfQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_IgoKEAd5Eeet-dyYFRXIfQ" name="admin" type="_TBqy0AdsEeebV_ghsGgJ4A" association="_IgmU4Ad5Eeet-dyYFRXIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_JBeNUAd5Eeet-dyYFRXIfQ" memberEnd="_JBfbcgd5Eeet-dyYFRXIfQ _JBfbcwd5Eeet-dyYFRXIfQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JBfbcAd5Eeet-dyYFRXIfQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JBfbcQd5Eeet-dyYFRXIfQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_JBfbcwd5Eeet-dyYFRXIfQ" name="admin" type="_TBqy0AdsEeebV_ghsGgJ4A" association="_JBeNUAd5Eeet-dyYFRXIfQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Sh5asAd5Eeet-dyYFRXIfQ" client="_TBqy0AdsEeebV_ghsGgJ4A" supplier="_ZYUpUAdgEeebV_ghsGgJ4A"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_U1npsLZMEeaUv6b48c781A">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U1oQwLZMEeaUv6b48c781A" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://es.unizar.disco.dice/profiles/DICE/1.0#//DDSM"/>
@@ -378,6 +422,19 @@
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://DICE_PROFILES/DICE.profile.uml#_MPXosOePEeWj7ZPL8JeBTQ"/>
     </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_F4aBEAdtEeebV_ghsGgJ4A">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F4h84AdtEeebV_ghsGgJ4A" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F4h84QdtEeebV_ghsGgJ4A" key="Version" value="0.0.100"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F4h84gdtEeebV_ghsGgJ4A" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F4h84wdtEeebV_ghsGgJ4A" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F4h85AdtEeebV_ghsGgJ4A" key="Date" value="2016-09-13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_F4h85QdtEeebV_ghsGgJ4A" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F4aoIAdtEeebV_ghsGgJ4A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://SECUREUML_PROFILES/SecureUML.profile.uml#_zVWe9Hm5Eeae1LmHHETvPg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SECUREUML_PROFILES/SecureUML.profile.uml#_K-t40DIwEeaCqKWE88ztuQ"/>
+    </profileApplication>
   </uml:Model>
   <DDSM:DdsmBigDataJob xmi:id="_EYrHYLZSEeaUv6b48c781A" application="http://193.77.50.17/html/dice-wikistats/wikistats-topology-0.1.0-SNAPSHOT.jar" application_class="dice.test.WikiTopology" base_Artifact="_6RCwELZREeaUv6b48c781A" application_name="wikistats">
     <arguments>https://dumps.wikimedia.org/enwiki/20160820/enwiki-20160820-pages-articles1.xml-p000000010p000030302.bz2</arguments>
@@ -453,4 +510,15 @@
   <DPIM:DpimSourceNode xmi:id="_B8UccAdhEeebV_ghsGgJ4A" base_Classifier="_Xmll8AdgEeebV_ghsGgJ4A"/>
   <DPIM:DpimStorageNode xmi:id="_DjCioAdhEeebV_ghsGgJ4A" base_Classifier="_c9upwAdgEeebV_ghsGgJ4A"/>
   <DPIM:DpimComputationNode xmi:id="_E4_B4AdhEeebV_ghsGgJ4A" base_Classifier="_ZYUpUAdgEeebV_ghsGgJ4A"/>
+  <SecureUML:Resource xmi:id="_InSpMAdtEeebV_ghsGgJ4A" base_Classifier="_hT-4UAdgEeebV_ghsGgJ4A"/>
+  <SecureUML:Resource xmi:id="_KURIYAdtEeebV_ghsGgJ4A" base_Classifier="_lkaLsAdgEeebV_ghsGgJ4A"/>
+  <SecureUML:Resource xmi:id="_LlkYMAdtEeebV_ghsGgJ4A" base_Classifier="_knpBcAdgEeebV_ghsGgJ4A"/>
+  <SecureUML:User xmi:id="_QX10YAdtEeebV_ghsGgJ4A" base_Classifier="_SSeKgAdsEeebV_ghsGgJ4A"/>
+  <SecureUML:Role xmi:id="_Rzt8gAdtEeebV_ghsGgJ4A" base_Classifier="_TBqy0AdsEeebV_ghsGgJ4A"/>
+  <SecureUML:SubjectAssignment xmi:id="_YwfhYAdtEeebV_ghsGgJ4A" base_Dependency="_WQ3dQAdtEeebV_ghsGgJ4A"/>
+  <SecureUML:Resource xmi:id="_uMcBYAd0EeebV_ghsGgJ4A" base_Classifier="_3sLuwAdzEeebV_ghsGgJ4A"/>
+  <SecureUML:AtomicAction xmi:id="_Ts1OsAd3Eeet-dyYFRXIfQ" base_Classifier="_QdEHEAd3Eeet-dyYFRXIfQ"/>
+  <SecureUML:AtomicAction xmi:id="_uzk9EAd4Eeet-dyYFRXIfQ" base_Classifier="_k7VGkAdtEeebV_ghsGgJ4A"/>
+  <SecureUML:AtomicAction xmi:id="_vvJ0gAd4Eeet-dyYFRXIfQ" base_Classifier="_I0QGIAd4Eeet-dyYFRXIfQ"/>
+  <SecureUML:AtomicAction xmi:id="_xrb7AAd4Eeet-dyYFRXIfQ" base_Classifier="_J65lIAd4Eeet-dyYFRXIfQ"/>
 </xmi:XMI>
