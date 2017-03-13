@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DDSM="http://es.unizar.disco.dice/profiles/DDSM/1.0" xmlns:DPIM="http://es.unizar.disco.dice/profiles/DPIM/1.0" xmlns:GQAM="http://www.eclipse.org/papyrus/GQAM/1" xmlns:GRM="http://www.eclipse.org/papyrus/GRM/1" xmlns:SecureUML="http://RootElement/schemas/SecureUML/_zVWe83m5Eeae1LmHHETvPg/99" xmlns:Storm="http://es.unizar.disco.dice/profiles/DTSM/Storm/1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://es.unizar.disco.dice/profiles/DDSM/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//DDSM http://es.unizar.disco.dice/profiles/DPIM/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//DPIM http://www.eclipse.org/papyrus/GQAM/1 http://www.eclipse.org/papyrus/MARTE/1#//GQAM http://www.eclipse.org/papyrus/GRM/1 http://www.eclipse.org/papyrus/MARTE/1#//GRM http://RootElement/schemas/SecureUML/_zVWe83m5Eeae1LmHHETvPg/99 pathmap://SECUREUML_PROFILES/SecureUML.profile.uml#_zVWe9Hm5Eeae1LmHHETvPg http://es.unizar.disco.dice/profiles/DTSM/Storm/1.0 http://es.unizar.disco.dice/profiles/DICE/1.0#//Storm">
   <uml:Model xmi:id="_HNAe8LZMEeaUv6b48c781A" name="RootElement">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_m2DlEAf1Eeeo9O_T333nGw" annotatedElement="_QDyqsLZSEeaUv6b48c781A">
+      <body>queueThreshold=4
+maxTaskParallelism=5
+maxSpoutPending=2
+isReliable=true</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_RFEIgAf2Eeeo9O_T333nGw" annotatedElement="_R3yX4LZSEeaUv6b48c781A">
+      <body>avgEmitRate=1
+parallelism=2</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_c8EywAf2Eeeo9O_T333nGw" annotatedElement="_cfGgULcMEeafVIer1DLqBA">
+      <body>alpha=0.92
+sigma=1
+parallelism=2</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_1gHwUAf2Eeeo9O_T333nGw" annotatedElement="_XMDxEOJIEeaAL8m_PtOKUg">
+      <body> alpha=7.96
+sigma=0
+parallelism=1</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_5La9YAf2Eeeo9O_T333nGw" annotatedElement="_u2tJwLcMEeafVIer1DLqBA">
+      <body>alpha=0.08
+sigma=1</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_BsFW4Af3Eeeo9O_T333nGw" annotatedElement="_aw7mAOJIEeaAL8m_PtOKUg">
+      <body>alpha=10.83
+sigma=0
+parallelism=1</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_J2P78Af3Eeeo9O_T333nGw" annotatedElement="_wUhLkLcMEeafVIer1DLqBA">
+      <body>alpha=0.05
+sigma=3
+parallelism=1</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_RAO2YAf3Eeeo9O_T333nGw" annotatedElement="_x1EYULcMEeafVIer1DLqBA">
+      <body>alpha=0.01
+sigma=1
+parallelism=5</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_X7WOYAf3Eeeo9O_T333nGw" annotatedElement="_ejJTYOJIEeaAL8m_PtOKUg">
+      <body>alpha=10.02
+sigma=0
+parallelism=1</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_7yBWwAf3Eeeo9O_T333nGw" annotatedElement="_ZYUpUAdgEeebV_ghsGgJ4A">
+      <body>targetTech=Storm</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_9SJFsAf3Eeeo9O_T333nGw" annotatedElement="_c9upwAdgEeebV_ghsGgJ4A">
+      <body>targetTech=Cassandra</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_GuMJYAf4Eeeo9O_T333nGw" annotatedElement="_Xmll8AdgEeebV_ghsGgJ4A">
+      <body>sourceType=webApi</body>
+    </ownedComment>
     <packagedElement xmi:type="uml:Device" xmi:id="_WY4Z8LZREeaUv6b48c781A" name="cluster1">
       <nestedNode xmi:type="uml:ExecutionEnvironment" xmi:id="_5om38OsTEeaNqaUKwX9hUw" name="storm_1">
         <deployment xmi:type="uml:Deployment" xmi:id="_G4hxYAdZEeebV_ghsGgJ4A" client="_5om38OsTEeaNqaUKwX9hUw" supplier="_6RCwELZREeaUv6b48c781A" deployedArtifact="_6RCwELZREeaUv6b48c781A"/>
@@ -37,7 +90,84 @@
       <edge xmi:type="uml:ControlFlow" xmi:id="_igfIIOJHEeaAL8m_PtOKUg" target="_EekMoOJHEeaAL8m_PtOKUg" source="_B6cDAOJHEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_i87zkOJHEeaAL8m_PtOKUg" target="_ppb3cOoAEeaAaJWhAAe-Ag" source="_EekMoOJHEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_jaLJMOJHEeaAL8m_PtOKUg" target="_pM0z8OoAEeaAaJWhAAe-Ag" source="_rl_JgOJGEeaAL8m_PtOKUg"/>
-      <group xmi:type="uml:ActivityPartition" xmi:id="__1rmULrQEea9a9xTRmpT8g" name="WikistatsApplication" node="_aMF5YLrREea9a9xTRmpT8g _wfUD0LrREea9a9xTRmpT8g _y82wwOJDEeaAL8m_PtOKUg _rl_JgOJGEeaAL8m_PtOKUg _8nEE4OJGEeaAL8m_PtOKUg _AD274OJHEeaAL8m_PtOKUg _B6cDAOJHEeaAL8m_PtOKUg _EekMoOJHEeaAL8m_PtOKUg" represents="_WY4Z8LZREeaUv6b48c781A"/>
+      <group xmi:type="uml:ActivityPartition" xmi:id="__1rmULrQEea9a9xTRmpT8g" name="WikistatsApplication" node="_aMF5YLrREea9a9xTRmpT8g _wfUD0LrREea9a9xTRmpT8g _y82wwOJDEeaAL8m_PtOKUg _rl_JgOJGEeaAL8m_PtOKUg _8nEE4OJGEeaAL8m_PtOKUg _AD274OJHEeaAL8m_PtOKUg _B6cDAOJHEeaAL8m_PtOKUg _EekMoOJHEeaAL8m_PtOKUg" represents="_WY4Z8LZREeaUv6b48c781A">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_kiOkcAf5Eeeo9O_T333nGw" annotatedElement="_1uISELrREea9a9xTRmpT8g">
+          <body>numTuples=1
+goruping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ngfsYAf5Eeeo9O_T333nGw">
+          <body>numTuples=1
+goruping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ntQ9EAf5Eeeo9O_T333nGw">
+          <body>numTuples=1
+goruping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_oQRjgAf5Eeeo9O_T333nGw" annotatedElement="_OKxnILrSEea9a9xTRmpT8g">
+          <body>numTuples=1
+grouping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_rebhkAf5Eeeo9O_T333nGw" annotatedElement="_gwqJQOJHEeaAL8m_PtOKUg">
+          <body>numTuples=1
+grouping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_s8v5sAf5Eeeo9O_T333nGw" annotatedElement="_hTphkOJHEeaAL8m_PtOKUg">
+          <body>numTuples=1
+grouping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_uYmzsAf5Eeeo9O_T333nGw" annotatedElement="_iIuIYOJHEeaAL8m_PtOKUg">
+          <body>numTuples=1
+grouping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_v2SSoAf5Eeeo9O_T333nGw" annotatedElement="_igfIIOJHEeaAL8m_PtOKUg">
+          <body>numTuples=1
+grouping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_3A7UYAf5Eeeo9O_T333nGw" annotatedElement="_hxeGAOJHEeaAL8m_PtOKUg">
+          <body>numTuples=1
+grouping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_YsoaAAf6Eeeo9O_T333nGw" annotatedElement="_aMF5YLrREea9a9xTRmpT8g">
+          <body>parallelism=2
+hostDemand=[3.1]</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_jAFm0Af6Eeeo9O_T333nGw" annotatedElement="_8nEE4OJGEeaAL8m_PtOKUg">
+          <body>parallelism=4
+hostDemand=[45]</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Hnsc4Af7Eeeo9O_T333nGw" annotatedElement="_AD274OJHEeaAL8m_PtOKUg">
+          <body>parallelism=2
+hostDemand=[2]</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_HqOzgAf7Eeeo9O_T333nGw">
+          <body>numTuples=1
+goruping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_I5ifQAf7Eeeo9O_T333nGw" annotatedElement="_B6cDAOJHEeaAL8m_PtOKUg">
+          <body>parallelism=2
+hostDemand=[10]</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_KF-dMAf7Eeeo9O_T333nGw" annotatedElement="_EekMoOJHEeaAL8m_PtOKUg">
+          <body>parallelism=2
+hostDemand=[10]</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_iVW84Af8Eeeo9O_T333nGw" annotatedElement="_rl_JgOJGEeaAL8m_PtOKUg">
+          <body>parallelism=2
+hostDemand=[20]</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_iZ43kAf8Eeeo9O_T333nGw">
+          <body>numTuples=1
+goruping=all</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_kZeJsAf8Eeeo9O_T333nGw" annotatedElement="_y82wwOJDEeaAL8m_PtOKUg">
+          <body>parallelism=2
+hostDemand=[30]</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_k3neQAf8Eeeo9O_T333nGw" annotatedElement="_wfUD0LrREea9a9xTRmpT8g">
+          <body>parallelism=3
+hostDemand=[10]</body>
+        </ownedComment>
+      </group>
       <node xmi:type="uml:OpaqueAction" xmi:id="_aMF5YLrREea9a9xTRmpT8g" name="WikiArticleSpout" incoming="_QrR1ALrSEea9a9xTRmpT8g" outgoing="_1uISELrREea9a9xTRmpT8g _gwqJQOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_wfUD0LrREea9a9xTRmpT8g" name="LinkCounterBolt" incoming="_1uISELrREea9a9xTRmpT8g" outgoing="_OKxnILrSEea9a9xTRmpT8g" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:InitialNode" xmi:id="_4hzTkLrREea9a9xTRmpT8g" outgoing="_QrR1ALrSEea9a9xTRmpT8g"/>
@@ -86,6 +216,18 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_mjPOouyJEeaCl4iuY56NpA" name="categoryaggrbolt" type="_x1EYULcMEeafVIer1DLqBA" association="_mjOAgOyJEeaCl4iuY56NpA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Activity" xmi:id="_KMeHAOoQEeakp7y5t6-Yaw" name="WikistatsDPIM" node="_VdpgUOoQEeakp7y5t6-Yaw _aXzGIOoQEeakp7y5t6-Yaw _bnLDUOoQEeakp7y5t6-Yaw" group="_YVAH8OoQEeakp7y5t6-Yaw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_UJhtIAf4Eeeo9O_T333nGw" annotatedElement="_aXzGIOoQEeakp7y5t6-Yaw">
+        <body>arrivalRate=5.0</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ejtNAAf4Eeeo9O_T333nGw" annotatedElement="_KMeHAOoQEeakp7y5t6-Yaw">
+        <body>		usedResources=cluster1
+		respT=5.46</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_qGU7oAf4Eeeo9O_T333nGw" annotatedElement="_VdpgUOoQEeakp7y5t6-Yaw">
+        <body>		rep=1
+		prob=1
+		hostDemand=[2.0]</body>
+      </ownedComment>
       <edge xmi:type="uml:ControlFlow" xmi:id="_ef91YOoQEeakp7y5t6-Yaw" target="_VdpgUOoQEeakp7y5t6-Yaw" source="_aXzGIOoQEeakp7y5t6-Yaw"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_e_uTgOoQEeakp7y5t6-Yaw" target="_bnLDUOoQEeakp7y5t6-Yaw" source="_VdpgUOoQEeakp7y5t6-Yaw"/>
       <group xmi:type="uml:ActivityPartition" xmi:id="_YVAH8OoQEeakp7y5t6-Yaw" name="Partition1" node="_VdpgUOoQEeakp7y5t6-Yaw _bnLDUOoQEeakp7y5t6-Yaw" represents="_WY4Z8LZREeaUv6b48c781A"/>
@@ -443,7 +585,7 @@
   <Storm:StormScenarioTopology xmi:id="_8xYU4LcMEeafVIer1DLqBA" base_NamedElement="_QDyqsLZSEeaUv6b48c781A" base_Class="_QDyqsLZSEeaUv6b48c781A" queueThreshold="4" maxTaskParallelism="5" maxSpoutPending="2" isReliable="true"/>
   <Storm:StormSpout xmi:id="_9sCmULcMEeafVIer1DLqBA" base_NamedElement="_R3yX4LZSEeaUv6b48c781A" blockT="" base_Classifier="_R3yX4LZSEeaUv6b48c781A" parallelism="2" avgEmitRate="1"/>
   <Storm:StormBolt xmi:id="_-sKmkLcMEeafVIer1DLqBA" base_NamedElement="_cfGgULcMEeafVIer1DLqBA" base_Classifier="_cfGgULcMEeafVIer1DLqBA" parallelism="2" alpha="0.92" sigma="1"/>
-  <Storm:StormBolt xmi:id="__hrSQLcMEeafVIer1DLqBA" base_NamedElement="_u2tJwLcMEeafVIer1DLqBA" base_Classifier="_u2tJwLcMEeafVIer1DLqBA" parallelism="2" alpha="0.08" sigma="1"/>
+  <Storm:StormBolt xmi:id="__hrSQLcMEeafVIer1DLqBA" base_NamedElement="_u2tJwLcMEeafVIer1DLqBA" blockT="" base_Classifier="_u2tJwLcMEeafVIer1DLqBA" parallelism="2" alpha="0.08" sigma="1"/>
   <Storm:StormBolt xmi:id="_AZwJwLcNEeafVIer1DLqBA" base_NamedElement="_wUhLkLcMEeafVIer1DLqBA" base_Classifier="_wUhLkLcMEeafVIer1DLqBA" parallelism="1" alpha="0.05" sigma="3"/>
   <Storm:StormBolt xmi:id="_BZBOYLcNEeafVIer1DLqBA" base_NamedElement="_x1EYULcMEeafVIer1DLqBA" base_Classifier="_x1EYULcMEeafVIer1DLqBA" parallelism="5" alpha="0.01" sigma="1"/>
   <Storm:StormScenarioTopology xmi:id="_rZTzULrREea9a9xTRmpT8g" base_NamedElement="_JU3TALrQEea9a9xTRmpT8g" usedResources="_z92vwOoPEeakp7y5t6-Yaw" base_Behavior="_JU3TALrQEea9a9xTRmpT8g" base_Class="_JU3TALrQEea9a9xTRmpT8g">
