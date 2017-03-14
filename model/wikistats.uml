@@ -652,7 +652,7 @@ hostDemand=[10]</body>
   <Storm:StormBolt xmi:id="_ocy5EOJIEeaAL8m_PtOKUg" base_NamedElement="_aw7mAOJIEeaAL8m_PtOKUg" base_Classifier="_aw7mAOJIEeaAL8m_PtOKUg" parallelism="1" alpha="10.83" sigma="0"/>
   <Storm:StormBolt xmi:id="_plqloOJIEeaAL8m_PtOKUg" base_NamedElement="_ejJTYOJIEeaAL8m_PtOKUg" base_Classifier="_ejJTYOJIEeaAL8m_PtOKUg" parallelism="1" alpha="10.02" sigma="0"/>
   <Storm:StormBolt xmi:id="_rShJAOJIEeaAL8m_PtOKUg" base_NamedElement="_XMDxEOJIEeaAL8m_PtOKUg" base_Classifier="_XMDxEOJIEeaAL8m_PtOKUg" parallelism="1" alpha="7.96" sigma="0"/>
-  <GQAM:GaExecHost xmi:id="_z92vwOoPEeakp7y5t6-Yaw" resMult="2&#xA;" base_Classifier="_WY4Z8LZREeaUv6b48c781A" schedPolicy="FIFO"/>
+  <GQAM:GaExecHost xmi:id="_z92vwOoPEeakp7y5t6-Yaw" resMult="2" base_Classifier="_WY4Z8LZREeaUv6b48c781A" schedPolicy="FIFO"/>
   <GQAM:GaStep xmi:id="_uVHwMOoQEeakp7y5t6-Yaw" base_NamedElement="_VdpgUOoQEeakp7y5t6-Yaw" base_Action="_VdpgUOoQEeakp7y5t6-Yaw">
     <hostDemand>2.0</hostDemand>
   </GQAM:GaStep>
