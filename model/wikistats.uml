@@ -78,23 +78,21 @@ parallelism=1</body>
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_1hXD4bcMEeafVIer1DLqBA" name="linkcounterbolt" type="_cfGgULcMEeafVIer1DLqBA" association="_1hV1wLcMEeafVIer1DLqBA"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Activity" xmi:id="_JU3TALrQEea9a9xTRmpT8g" name="WikistatsTopology" node="_aMF5YLrREea9a9xTRmpT8g _wfUD0LrREea9a9xTRmpT8g _4hzTkLrREea9a9xTRmpT8g _MpW3sLrSEea9a9xTRmpT8g _y82wwOJDEeaAL8m_PtOKUg _rl_JgOJGEeaAL8m_PtOKUg _8nEE4OJGEeaAL8m_PtOKUg _AD274OJHEeaAL8m_PtOKUg _B6cDAOJHEeaAL8m_PtOKUg _EekMoOJHEeaAL8m_PtOKUg _pM0z8OoAEeaAaJWhAAe-Ag _ppb3cOoAEeaAaJWhAAe-Ag" group="__1rmULrQEea9a9xTRmpT8g">
-      <edge xmi:type="uml:ControlFlow" xmi:id="_1uISELrREea9a9xTRmpT8g" target="_wfUD0LrREea9a9xTRmpT8g" source="_aMF5YLrREea9a9xTRmpT8g"/>
+    <packagedElement xmi:type="uml:Activity" xmi:id="_JU3TALrQEea9a9xTRmpT8g" name="WikistatsTopology" node="_aMF5YLrREea9a9xTRmpT8g _wfUD0LrREea9a9xTRmpT8g _4hzTkLrREea9a9xTRmpT8g _MpW3sLrSEea9a9xTRmpT8g _y82wwOJDEeaAL8m_PtOKUg _rl_JgOJGEeaAL8m_PtOKUg _8nEE4OJGEeaAL8m_PtOKUg _AD274OJHEeaAL8m_PtOKUg _B6cDAOJHEeaAL8m_PtOKUg _EekMoOJHEeaAL8m_PtOKUg _pM0z8OoAEeaAaJWhAAe-Ag _ppb3cOoAEeaAaJWhAAe-Ag _4Z8H8Ai4EeesYdnxdFGKVQ _PYUvQAi5EeesYdnxdFGKVQ" group="__1rmULrQEea9a9xTRmpT8g">
       <edge xmi:type="uml:ControlFlow" xmi:id="_OKxnILrSEea9a9xTRmpT8g" target="_y82wwOJDEeaAL8m_PtOKUg" source="_wfUD0LrREea9a9xTRmpT8g"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_QrR1ALrSEea9a9xTRmpT8g" target="_aMF5YLrREea9a9xTRmpT8g" source="_4hzTkLrREea9a9xTRmpT8g"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_3TocYOJGEeaAL8m_PtOKUg" target="_MpW3sLrSEea9a9xTRmpT8g" source="_y82wwOJDEeaAL8m_PtOKUg"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_gwqJQOJHEeaAL8m_PtOKUg" target="_8nEE4OJGEeaAL8m_PtOKUg" source="_aMF5YLrREea9a9xTRmpT8g"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_hTphkOJHEeaAL8m_PtOKUg" target="_AD274OJHEeaAL8m_PtOKUg" source="_8nEE4OJGEeaAL8m_PtOKUg"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_hxeGAOJHEeaAL8m_PtOKUg" target="_rl_JgOJGEeaAL8m_PtOKUg" source="_8nEE4OJGEeaAL8m_PtOKUg"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_gwqJQOJHEeaAL8m_PtOKUg" target="_4Z8H8Ai4EeesYdnxdFGKVQ" source="_aMF5YLrREea9a9xTRmpT8g"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_hxeGAOJHEeaAL8m_PtOKUg" target="_PYUvQAi5EeesYdnxdFGKVQ" source="_8nEE4OJGEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_iIuIYOJHEeaAL8m_PtOKUg" target="_B6cDAOJHEeaAL8m_PtOKUg" source="_AD274OJHEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_igfIIOJHEeaAL8m_PtOKUg" target="_EekMoOJHEeaAL8m_PtOKUg" source="_B6cDAOJHEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_i87zkOJHEeaAL8m_PtOKUg" target="_ppb3cOoAEeaAaJWhAAe-Ag" source="_EekMoOJHEeaAL8m_PtOKUg"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_jaLJMOJHEeaAL8m_PtOKUg" target="_pM0z8OoAEeaAaJWhAAe-Ag" source="_rl_JgOJGEeaAL8m_PtOKUg"/>
-      <group xmi:type="uml:ActivityPartition" xmi:id="__1rmULrQEea9a9xTRmpT8g" name="WikistatsApplication" node="_aMF5YLrREea9a9xTRmpT8g _wfUD0LrREea9a9xTRmpT8g _y82wwOJDEeaAL8m_PtOKUg _rl_JgOJGEeaAL8m_PtOKUg _8nEE4OJGEeaAL8m_PtOKUg _AD274OJHEeaAL8m_PtOKUg _B6cDAOJHEeaAL8m_PtOKUg _EekMoOJHEeaAL8m_PtOKUg" represents="_WY4Z8LZREeaUv6b48c781A">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_kiOkcAf5Eeeo9O_T333nGw" annotatedElement="_1uISELrREea9a9xTRmpT8g">
-          <body>numTuples=1
-goruping=all</body>
-        </ownedComment>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_Glb9UAi5EeesYdnxdFGKVQ" target="_wfUD0LrREea9a9xTRmpT8g" source="_4Z8H8Ai4EeesYdnxdFGKVQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_IRhEoAi5EeesYdnxdFGKVQ" target="_8nEE4OJGEeaAL8m_PtOKUg" source="_4Z8H8Ai4EeesYdnxdFGKVQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_UsafEAi5EeesYdnxdFGKVQ" target="_rl_JgOJGEeaAL8m_PtOKUg" source="_PYUvQAi5EeesYdnxdFGKVQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_qsxX4Ai5EeesYdnxdFGKVQ" target="_AD274OJHEeaAL8m_PtOKUg" source="_PYUvQAi5EeesYdnxdFGKVQ"/>
+      <group xmi:type="uml:ActivityPartition" xmi:id="__1rmULrQEea9a9xTRmpT8g" name="WikistatsApplication" node="_aMF5YLrREea9a9xTRmpT8g _wfUD0LrREea9a9xTRmpT8g _y82wwOJDEeaAL8m_PtOKUg _rl_JgOJGEeaAL8m_PtOKUg _8nEE4OJGEeaAL8m_PtOKUg _AD274OJHEeaAL8m_PtOKUg _B6cDAOJHEeaAL8m_PtOKUg _EekMoOJHEeaAL8m_PtOKUg _4hzTkLrREea9a9xTRmpT8g _pM0z8OoAEeaAaJWhAAe-Ag _ppb3cOoAEeaAaJWhAAe-Ag _MpW3sLrSEea9a9xTRmpT8g _4Z8H8Ai4EeesYdnxdFGKVQ _PYUvQAi5EeesYdnxdFGKVQ" represents="_WY4Z8LZREeaUv6b48c781A">
         <ownedComment xmi:type="uml:Comment" xmi:id="_ngfsYAf5Eeeo9O_T333nGw">
           <body>numTuples=1
 goruping=all</body>
@@ -108,10 +106,6 @@ goruping=all</body>
 grouping=all</body>
         </ownedComment>
         <ownedComment xmi:type="uml:Comment" xmi:id="_rebhkAf5Eeeo9O_T333nGw" annotatedElement="_gwqJQOJHEeaAL8m_PtOKUg">
-          <body>numTuples=1
-grouping=all</body>
-        </ownedComment>
-        <ownedComment xmi:type="uml:Comment" xmi:id="_s8v5sAf5Eeeo9O_T333nGw" annotatedElement="_hTphkOJHEeaAL8m_PtOKUg">
           <body>numTuples=1
 grouping=all</body>
         </ownedComment>
@@ -168,18 +162,20 @@ hostDemand=[30]</body>
 hostDemand=[10]</body>
         </ownedComment>
       </group>
-      <node xmi:type="uml:OpaqueAction" xmi:id="_aMF5YLrREea9a9xTRmpT8g" name="WikiArticleSpout" incoming="_QrR1ALrSEea9a9xTRmpT8g" outgoing="_1uISELrREea9a9xTRmpT8g _gwqJQOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
-      <node xmi:type="uml:OpaqueAction" xmi:id="_wfUD0LrREea9a9xTRmpT8g" name="LinkCounterBolt" incoming="_1uISELrREea9a9xTRmpT8g" outgoing="_OKxnILrSEea9a9xTRmpT8g" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
-      <node xmi:type="uml:InitialNode" xmi:id="_4hzTkLrREea9a9xTRmpT8g" outgoing="_QrR1ALrSEea9a9xTRmpT8g"/>
-      <node xmi:type="uml:ActivityFinalNode" xmi:id="_MpW3sLrSEea9a9xTRmpT8g" name="final2" incoming="_3TocYOJGEeaAL8m_PtOKUg"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_aMF5YLrREea9a9xTRmpT8g" name="WikiArticleSpout" incoming="_QrR1ALrSEea9a9xTRmpT8g" outgoing="_gwqJQOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_wfUD0LrREea9a9xTRmpT8g" name="LinkCounterBolt" incoming="_Glb9UAi5EeesYdnxdFGKVQ" outgoing="_OKxnILrSEea9a9xTRmpT8g" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:InitialNode" xmi:id="_4hzTkLrREea9a9xTRmpT8g" name="Start" outgoing="_QrR1ALrSEea9a9xTRmpT8g" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_MpW3sLrSEea9a9xTRmpT8g" name="final2" incoming="_3TocYOJGEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_y82wwOJDEeaAL8m_PtOKUg" name="LinksPerPageCassandraWriter" incoming="_OKxnILrSEea9a9xTRmpT8g" outgoing="_3TocYOJGEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
-      <node xmi:type="uml:OpaqueAction" xmi:id="_rl_JgOJGEeaAL8m_PtOKUg" name="CategoriesPerPageCassandraWriter" incoming="_hxeGAOJHEeaAL8m_PtOKUg" outgoing="_jaLJMOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
-      <node xmi:type="uml:OpaqueAction" xmi:id="_8nEE4OJGEeaAL8m_PtOKUg" name="CategoriesExtractBolt" incoming="_gwqJQOJHEeaAL8m_PtOKUg" outgoing="_hxeGAOJHEeaAL8m_PtOKUg _hTphkOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
-      <node xmi:type="uml:OpaqueAction" xmi:id="_AD274OJHEeaAL8m_PtOKUg" name="CategoriesSplitBolt" incoming="_hTphkOJHEeaAL8m_PtOKUg" outgoing="_iIuIYOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_rl_JgOJGEeaAL8m_PtOKUg" name="CategoriesPerPageCassandraWriter" incoming="_UsafEAi5EeesYdnxdFGKVQ" outgoing="_jaLJMOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_8nEE4OJGEeaAL8m_PtOKUg" name="CategoriesExtractBolt" incoming="_IRhEoAi5EeesYdnxdFGKVQ" outgoing="_hxeGAOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_AD274OJHEeaAL8m_PtOKUg" name="CategoriesSplitBolt" incoming="_qsxX4Ai5EeesYdnxdFGKVQ" outgoing="_iIuIYOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_B6cDAOJHEeaAL8m_PtOKUg" name="CategoryAggrBolt" incoming="_iIuIYOJHEeaAL8m_PtOKUg" outgoing="_igfIIOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_EekMoOJHEeaAL8m_PtOKUg" name="PagesPerCategoryCassandraWriter" incoming="_igfIIOJHEeaAL8m_PtOKUg" outgoing="_i87zkOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
-      <node xmi:type="uml:ActivityFinalNode" xmi:id="_pM0z8OoAEeaAaJWhAAe-Ag" name="final1" incoming="_jaLJMOJHEeaAL8m_PtOKUg"/>
-      <node xmi:type="uml:ActivityFinalNode" xmi:id="_ppb3cOoAEeaAaJWhAAe-Ag" name="final3" incoming="_i87zkOJHEeaAL8m_PtOKUg"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_pM0z8OoAEeaAaJWhAAe-Ag" name="final1" incoming="_jaLJMOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_ppb3cOoAEeaAaJWhAAe-Ag" name="final3" incoming="_i87zkOJHEeaAL8m_PtOKUg" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:ForkNode" xmi:id="_4Z8H8Ai4EeesYdnxdFGKVQ" name="ForkNode1" incoming="_gwqJQOJHEeaAL8m_PtOKUg" outgoing="_Glb9UAi5EeesYdnxdFGKVQ _IRhEoAi5EeesYdnxdFGKVQ" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
+      <node xmi:type="uml:ForkNode" xmi:id="_PYUvQAi5EeesYdnxdFGKVQ" name="ForkNode2" incoming="_hxeGAOJHEeaAL8m_PtOKUg" outgoing="_UsafEAi5EeesYdnxdFGKVQ _qsxX4Ai5EeesYdnxdFGKVQ" inPartition="__1rmULrQEea9a9xTRmpT8g"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_doawgOJIEeaAL8m_PtOKUg" memberEnd="_dobXkeJIEeaAL8m_PtOKUg _dobXkuJIEeaAL8m_PtOKUg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_doawgeJIEeaAL8m_PtOKUg" source="org.eclipse.papyrus">
@@ -619,13 +615,12 @@ hostDemand=[10]</body>
   <Storm:StormScenarioTopology xmi:id="_rZTzULrREea9a9xTRmpT8g" base_NamedElement="_JU3TALrQEea9a9xTRmpT8g" usedResources="_z92vwOoPEeakp7y5t6-Yaw" base_Behavior="_JU3TALrQEea9a9xTRmpT8g" base_Class="_JU3TALrQEea9a9xTRmpT8g">
     <utilization>3.2</utilization>
   </Storm:StormScenarioTopology>
-  <Storm:StormSpout xmi:id="_tx2YALrREea9a9xTRmpT8g" base_NamedElement="_aMF5YLrREea9a9xTRmpT8g" base_Action="_aMF5YLrREea9a9xTRmpT8g" parallelism="2&#xA;" avgEmitRate="3.5&#xA;">
+  <Storm:StormSpout xmi:id="_tx2YALrREea9a9xTRmpT8g" base_NamedElement="_aMF5YLrREea9a9xTRmpT8g" base_Action="_aMF5YLrREea9a9xTRmpT8g" blockT="0.2" parallelism="2&#xA;" avgEmitRate="3.5&#xA;">
     <hostDemand>3.1</hostDemand>
   </Storm:StormSpout>
   <Storm:StormBolt xmi:id="_0I4ykLrREea9a9xTRmpT8g" base_NamedElement="_wfUD0LrREea9a9xTRmpT8g" base_Action="_wfUD0LrREea9a9xTRmpT8g" parallelism="3">
     <hostDemand>10</hostDemand>
   </Storm:StormBolt>
-  <Storm:StormStreamStep xmi:id="_3mLY0LrREea9a9xTRmpT8g" base_NamedElement="_1uISELrREea9a9xTRmpT8g" numTuples="1"/>
   <GQAM:GaAnalysisContext xmi:id="_lgc2AOJDEeaAL8m_PtOKUg" base_StructuredClassifier="_JU3TALrQEea9a9xTRmpT8g" base_NamedElement="_JU3TALrQEea9a9xTRmpT8g">
     <context>out$utilization</context>
     <context>in$c1</context>
@@ -650,7 +645,6 @@ hostDemand=[10]</body>
     <hostDemand>20</hostDemand>
   </Storm:StormBolt>
   <Storm:StormStreamStep xmi:id="_3i7nMOJHEeaAL8m_PtOKUg" base_NamedElement="_gwqJQOJHEeaAL8m_PtOKUg" numTuples="1&#xA;"/>
-  <Storm:StormStreamStep xmi:id="_5bu74OJHEeaAL8m_PtOKUg" base_NamedElement="_hTphkOJHEeaAL8m_PtOKUg" numTuples="1"/>
   <Storm:StormStreamStep xmi:id="_7sAVYOJHEeaAL8m_PtOKUg" base_NamedElement="_OKxnILrSEea9a9xTRmpT8g" numTuples="1"/>
   <Storm:StormStreamStep xmi:id="_9BTUYOJHEeaAL8m_PtOKUg" base_NamedElement="_iIuIYOJHEeaAL8m_PtOKUg" numTuples="1"/>
   <Storm:StormStreamStep xmi:id="_-tqIgOJHEeaAL8m_PtOKUg" base_NamedElement="_igfIIOJHEeaAL8m_PtOKUg" numTuples="1"/>
@@ -658,7 +652,7 @@ hostDemand=[10]</body>
   <Storm:StormBolt xmi:id="_ocy5EOJIEeaAL8m_PtOKUg" base_NamedElement="_aw7mAOJIEeaAL8m_PtOKUg" base_Classifier="_aw7mAOJIEeaAL8m_PtOKUg" parallelism="1" alpha="10.83" sigma="0"/>
   <Storm:StormBolt xmi:id="_plqloOJIEeaAL8m_PtOKUg" base_NamedElement="_ejJTYOJIEeaAL8m_PtOKUg" base_Classifier="_ejJTYOJIEeaAL8m_PtOKUg" parallelism="1" alpha="10.02" sigma="0"/>
   <Storm:StormBolt xmi:id="_rShJAOJIEeaAL8m_PtOKUg" base_NamedElement="_XMDxEOJIEeaAL8m_PtOKUg" base_Classifier="_XMDxEOJIEeaAL8m_PtOKUg" parallelism="1" alpha="7.96" sigma="0"/>
-  <GQAM:GaExecHost xmi:id="_z92vwOoPEeakp7y5t6-Yaw" resMult="2&#xA;" base_Classifier="_WY4Z8LZREeaUv6b48c781A"/>
+  <GQAM:GaExecHost xmi:id="_z92vwOoPEeakp7y5t6-Yaw" resMult="2&#xA;" base_Classifier="_WY4Z8LZREeaUv6b48c781A" schedPolicy="FIFO"/>
   <GQAM:GaStep xmi:id="_uVHwMOoQEeakp7y5t6-Yaw" base_NamedElement="_VdpgUOoQEeakp7y5t6-Yaw" base_Action="_VdpgUOoQEeakp7y5t6-Yaw">
     <hostDemand>2.0</hostDemand>
   </GQAM:GaStep>
@@ -670,7 +664,7 @@ hostDemand=[10]</body>
     <context>in$c1</context>
   </GQAM:GaAnalysisContext>
   <GQAM:GaWorkloadEvent xmi:id="_kUY1oOoREeakp7y5t6-Yaw" pattern="open=(arrivalRate=(expr=5.0, unit=Hz, statQ=mean, source=est))" base_NamedElement="_aXzGIOoQEeakp7y5t6-Yaw"/>
-  <GRM:Scheduler xmi:id="_3k_JQPv8Eea8zqLVRizDRA" base_Classifier="_6RCwELZREeaUv6b48c781A"/>
+  <GRM:Scheduler xmi:id="_3k_JQPv8Eea8zqLVRizDRA" base_Classifier="_6RCwELZREeaUv6b48c781A" otherSchedPolicy="ref"/>
   <DDSM:DdsmCassandraCluster xmi:id="_Mcmd8AdZEeebV_ghsGgJ4A" base_Node="_3Yd80AdYEeebV_ghsGgJ4A" protected="true"/>
   <DDSM:DdsmStormCluster xmi:id="_PyYuAAdZEeebV_ghsGgJ4A" base_Node="_5om38OsTEeaNqaUKwX9hUw" protected="true" base_ExecutionEnvironment="_5om38OsTEeaNqaUKwX9hUw"/>
   <DDSM:DdsmVMsCluster xmi:id="_Rs5S4AdZEeebV_ghsGgJ4A" base_Device="_0hehkAdYEeebV_ghsGgJ4A"/>
