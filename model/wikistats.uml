@@ -262,7 +262,7 @@ hostDemand=[10]</body>
       <ownedEnd xmi:type="uml:Property" xmi:id="_mIjy4OyLEeaCl4iuY56NpA" name="linksperpagecassandrawriter" type="_XMDxEOJIEeaAL8m_PtOKUg" association="_mIgvkOyLEeaCl4iuY56NpA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Device" xmi:id="_0hehkAdYEeebV_ghsGgJ4A" name="cluster2">
-      <nestedNode xmi:type="uml:Node" xmi:id="_ztNZwAddEeebV_ghsGgJ4A" name="zookeeper_!"/>
+      <nestedNode xmi:type="uml:Node" xmi:id="_ztNZwAddEeebV_ghsGgJ4A" name="zookeeper_1"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Device" xmi:id="_0_nPEAdYEeebV_ghsGgJ4A" name="cluster3">
       <nestedNode xmi:type="uml:Node" xmi:id="_3Yd80AdYEeebV_ghsGgJ4A" name="cassandra_1"/>
