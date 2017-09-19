@@ -1,7 +1,7 @@
 tosca_definitions_version: cloudify_dsl_1_3
 
 imports:
-  - https://github.com/dice-project/DICE-Deployment-Cloudify/releases/download/0.2.8/fco.yaml
+  - https://github.com/dice-project/DICE-Deployment-Cloudify/releases/download/0.7.2/full.yaml
 
 node_templates:
   # Zookeeper
@@ -9,7 +9,7 @@ node_templates:
     type: dice.firewall_rules.zookeeper.Server
 
   zookeeper_vm:
-    type: dice.hosts.Medium
+    type: dice.hosts.ubuntu.Medium
     instances:
       deploy: 1
     relationships:
@@ -43,7 +43,7 @@ node_templates:
     type: dice.firewall_rules.storm.Nimbus
 
   nimbus_vm:
-    type: dice.hosts.Medium
+    type: dice.hosts.ubuntu.Medium
     relationships:
       - type: dice.relationships.IPAvailableFrom
         target: storm_floating_ip
@@ -66,7 +66,7 @@ node_templates:
     type: dice.firewall_rules.storm.Worker
 
   storm_vm:
-    type: dice.hosts.Medium
+    type: dice.hosts.ubuntu.Medium
     instances:
       deploy: 3
     relationships:
@@ -91,7 +91,7 @@ node_templates:
     type: dice.firewall_rules.cassandra.Common
 
   cs_seed_vm:
-    type: dice.hosts.Medium
+    type: dice.hosts.ubuntu.Medium
     relationships:
       - type: dice.relationships.ProtectedBy
         target: cassandra_security_group
@@ -106,7 +106,7 @@ node_templates:
         target: cs_seed_vm
 
   cs_wrk_vm:
-    type: dice.hosts.Medium
+    type: dice.hosts.ubuntu.Medium
     instances:
       deploy: 3
     relationships:
@@ -143,6 +143,7 @@ node_templates:
         target: storm
       - type: dice.relationships.Needs
         target: cassandra_worker
+
 
 outputs:
   storm_nimbus_gui:
