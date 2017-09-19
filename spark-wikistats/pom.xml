@@ -25,7 +25,54 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <artifactId>maven-antrun-plugin</artifactId>
+              <version>1.3</version>
+            </plugin>
+            <plugin>
+              <artifactId>maven-assembly-plugin</artifactId>
+              <version>2.2-beta-5</version>
+            </plugin>
+            <plugin>
+              <artifactId>maven-dependency-plugin</artifactId>
+              <version>2.8</version>
+            </plugin>
+            <plugin>
+              <artifactId>maven-release-plugin</artifactId>
+              <version>2.3.2</version>
+            </plugin>
+          </plugins>
+        </pluginManagement>
         <plugins>
+            <!-- This plugin entry is for Eclipse -->
+            <plugin>
+                <groupId>org.eclipse.m2e</groupId>
+                <artifactId>lifecycle-mapping</artifactId>
+                <version>1.0.0</version>
+                <configuration>
+                    <lifecycleMappingMetadata>
+                        <pluginExecutions>
+                            <pluginExecution>
+                                <pluginExecutionFilter>
+                                    <groupId>org.apache.maven.plugins</groupId>
+                                    <artifactId>maven-antrun-plugin</artifactId>
+                                    <versionRange>[1.0,)</versionRange>
+                                    <goals>
+                                        <goal>run</goal>
+                                    </goals>
+                                </pluginExecutionFilter>
+                                <action>
+                                    <execute>
+                                        <runOnIncremental>false</runOnIncremental>
+                                    </execute>
+                                </action>
+                            </pluginExecution>
+                        </pluginExecutions>
+                    </lifecycleMappingMetadata>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -34,6 +81,28 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <!-- We want the built jar to be copied into the lib/ folder. -->
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-antrun-plugin</artifactId>
+              <version>1.8</version>
+              <executions>
+                <execution>
+                  <phase>package</phase>
+                  <goals>
+                    <goal>run</goal>
+                  </goals>
+                  <configuration>
+                    <tasks>
+                      <echo>Copying the ${project.build.finalName}.jar to the lib/ folder for blueprint</echo>
+                      <mkdir dir="${basedir}/lib"/>
+                      <copy file="target/${project.build.finalName}.jar"
+                        todir="${basedir}/lib"/>
+                    </tasks>
+                  </configuration>
+                </execution>
+              </executions>
             </plugin>
         </plugins>
     </build>
