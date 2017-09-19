@@ -1,0 +1,75 @@
+tosca_definitions_version: cloudify_dsl_1_3
+
+imports:
+  - https://github.com/dice-project/DICE-Deployment-Cloudify/releases/download/0.7.2/full.yaml
+
+
+node_templates:
+
+  master_ip:
+    type: dice.VirtualIP
+
+  master_fw:
+    type: dice.firewall_rules.spark.Master
+
+  master_vm:
+    type: dice.hosts.ubuntu.Medium
+    relationships:
+      - type: dice.relationships.IPAvailableFrom
+        target: master_ip
+      - type: dice.relationships.ProtectedBy
+        target: master_fw
+
+  master:
+    type: dice.components.spark.Master
+    properties:
+      monitoring:
+        enabled: true
+    relationships:
+      - type: dice.relationships.ContainedIn
+        target: master_vm
+
+  worker_fw:
+    type: dice.firewall_rules.spark.Worker
+
+  worker_vm:
+    type: dice.hosts.ubuntu.Medium
+    instances:
+      deploy: 2
+    relationships:
+      - type: dice.relationships.ProtectedBy
+        target: worker_fw
+
+  worker:
+    type: dice.components.spark.Worker
+    properties:
+      monitoring:
+        enabled: true
+    relationships:
+      - type: dice.relationships.ContainedIn
+        target: worker_vm
+      - type: dice.relationships.spark.ConnectedToMaster
+        target: master
+
+  wikistats:
+    type: dice.components.spark.Application
+    properties:
+      jar: spark.wikistats-1.0-SNAPSHOT.jar
+      class: it.polimi.deib.dice.spark.SparkWikistats
+      name: wikistats
+    relationships:
+      - type: dice.relationships.spark.SubmittedBy
+        target: master
+      - type: dice.relationships.Needs
+        target: worker
+
+
+outputs:
+
+  spark_master_ui:
+    description: Apache Spark master UI
+    value:
+      concat:
+        - http://
+        - get_attribute: [ master_ip, address ]
+        - ":8080"
