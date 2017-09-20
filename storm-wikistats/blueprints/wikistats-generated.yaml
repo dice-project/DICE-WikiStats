@@ -1,0 +1,137 @@
+tosca_definitions_version: cloudify_dsl_1_3
+imports: ['https://github.com/dice-project/DICE-Deployment-Cloudify/releases/download/0.7.2/full.yaml']
+outputs:
+  cluster1_ip_output:
+    value:
+      get_attribute: [cluster1, ip]
+  cluster2_ip_output:
+    value:
+      get_attribute: [cluster2, ip]
+  cluster3_ip_output:
+    value:
+      get_attribute: [cluster3, ip]
+node_templates:
+  cluster1:
+    type: dice.hosts.ubuntu.Medium
+    instances: {deploy: 1}
+    relationships:
+    - {type: dice.relationships.ProtectedBy, target: storm_1_firewall}
+    - {type: dice.relationships.IPAvailableFrom, target: cluster1_ip}
+    properties: {platform: fco}
+  cluster1_ip:
+    type: dice.VirtualIP
+    properties: {}
+  cluster2:
+    type: dice.hosts.ubuntu.Small
+    instances: {deploy: 1}
+    relationships:
+    - {type: dice.relationships.ProtectedBy, target: zookeeper_1_firewall}
+    - {type: dice.relationships.IPAvailableFrom, target: cluster2_ip}
+    properties: {platform: fco}
+  cluster2_ip:
+    type: dice.VirtualIP
+    properties: {}
+  cluster3:
+    type: dice.hosts.ubuntu.Medium
+    instances: {deploy: 1}
+    relationships:
+    - {type: dice.relationships.ProtectedBy, target: cassandra_1_firewall}
+    - {type: dice.relationships.IPAvailableFrom, target: cluster3_ip}
+    properties: {platform: fco}
+  cluster3_ip:
+    type: dice.VirtualIP
+    properties: {}
+  cassandra_1:
+    type: dice.components.cassandra.Worker
+    relationships:
+    - {type: dice.relationships.ContainedIn, target: cluster3}
+    - {type: dice.relationships.cassandra.ConnectedToSeed, target: cassandra_1_seed}
+    properties:
+      monitoring: {enabled: false}
+      configuration: {key_cache_save_period: '14400', memtable_flush_writers: '1'}
+  cassandra_1_seed:
+    type: dice.components.cassandra.Seed
+    relationships:
+    - {type: dice.relationships.ContainedIn, target: cassandra_1_seed_vm}
+    properties: {}
+  cassandra_1_firewall:
+    type: dice.firewall_rules.cassandra.Common
+    properties: {}
+  cassandra_1_seed_vm:
+    type: dice.hosts.ubuntu.Medium
+    instances: {deploy: 1}
+    relationships:
+    - {type: dice.relationships.ProtectedBy, target: cassandra_1_firewall}
+    - {type: dice.relationships.IPAvailableFrom, target: cassandra_1_seed_vm_ip}
+    properties: {}
+  cassandra_1_seed_vm_ip:
+    type: dice.VirtualIP
+    properties: {}
+  zookeeper_1:
+    type: dice.components.zookeeper.Server
+    relationships:
+    - {type: dice.relationships.ContainedIn, target: cluster2}
+    - {type: dice.relationships.zookeeper.MemberOfQuorum, target: zookeeper_1_quorum}
+    properties:
+      monitoring: {enabled: false}
+      configuration: {tickTime: '1500', syncLimit: '10', initLimit: '5'}
+  zookeeper_1_firewall:
+    type: dice.firewall_rules.zookeeper.Server
+    properties: {}
+  zookeeper_1_quorum:
+    type: dice.components.zookeeper.Quorum
+    relationships:
+    - {type: dice.relationships.zookeeper.QuorumContains, target: cluster2}
+    properties: {}
+  storm_1_master:
+    type: dice.components.storm.Nimbus
+    relationships:
+    - {type: dice.relationships.ContainedIn, target: storm_1_master_vm}
+    - {type: dice.relationships.storm.ConnectedToZookeeperQuorum, target: zookeeper_1_quorum}
+    properties:
+      monitoring: {enabled: false}
+      configuration: {taskTimeout: '60', supervisorFrequency: '60', queueSize: '10000',
+        monitorFrequency: '40', retryTimes: '5', retryInterval: '2000', workerStartTimeout: '0',
+        cpuCapacity: '0', memoryCapacity: '0', heartbeatFrequency: '0'}
+  storm_1:
+    type: dice.components.storm.Worker
+    relationships:
+    - {type: dice.relationships.ContainedIn, target: cluster1}
+    - {type: dice.relationships.storm.ConnectedToZookeeperQuorum, target: zookeeper_1_quorum}
+    - {type: dice.relationships.storm.ConnectedToNimbus, target: storm_1_master}
+    properties:
+      monitoring: {enabled: false}
+      configuration: {taskTimeout: '60', supervisorFrequency: '60', queueSize: '10000',
+        monitorFrequency: '40', retryTimes: '5', retryInterval: '2000', workerStartTimeout: '0',
+        cpuCapacity: '0', memoryCapacity: '0', heartbeatFrequency: '0'}
+  storm_1_master_firewall:
+    type: dice.firewall_rules.storm.Nimbus
+    properties: {}
+  storm_1_firewall:
+    type: dice.firewall_rules.storm.Worker
+    properties: {}
+  storm_1_master_vm:
+    type: dice.hosts.ubuntu.Medium
+    instances: {deploy: 1}
+    relationships:
+    - {type: dice.relationships.ProtectedBy, target: storm_1_master_firewall}
+    - {type: dice.relationships.IPAvailableFrom, target: storm_1_master_vm_ip}
+    properties: {}
+  storm_1_master_vm_ip:
+    type: dice.VirtualIP
+    properties: {}
+  WikistatsApplication:
+    type: dice.components.storm.Topology
+    relationships:
+    - {type: dice.relationships.Needs, target: storm_1}
+    - {type: dice.relationships.storm.SubmittedBy, target: storm_1_master}
+    - {type: dice.relationships.Needs, target: cassandra_1}
+    properties:
+      monitoring: {enabled: false}
+      arguments:
+      - get_attribute: [cassandra_1, ip]
+      - https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles1.xml-p10p30302.bz2
+      application: http://193.77.50.17/html/dice-wikistats/wikistats-topology-0.1.0-SNAPSHOT.jar
+      topology_class: dice.test.WikiTopology
+      topology_name: wikistats
+

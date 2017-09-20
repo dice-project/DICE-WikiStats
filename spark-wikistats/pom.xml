@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>it.deib.polimi.dice</groupId>
-    <artifactId>spark.wikistats</artifactId>
+    <artifactId>spark-wikistats</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>

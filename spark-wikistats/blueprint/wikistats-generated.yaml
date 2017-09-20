@@ -1,0 +1,58 @@
+tosca_definitions_version: cloudify_dsl_1_3
+imports: ['https://github.com/dice-project/DICE-Deployment-Cloudify/releases/download/0.7.2/full.yaml']
+outputs:
+  cluster1_ip_output:
+    value:
+      get_attribute: [cluster1, ip]
+node_templates:
+  cluster1:
+    type: dice.hosts.ubuntu.Medium
+    instances: {deploy: 1}
+    relationships:
+    - {type: dice.relationships.ProtectedBy, target: spark1_firewall}
+    - {type: dice.relationships.IPAvailableFrom, target: cluster1_ip}
+    properties: {platform: fco}
+  cluster1_ip:
+    type: dice.VirtualIP
+    properties: {}
+  spark1_master:
+    type: dice.components.spark.Master
+    relationships:
+    - {type: dice.relationships.ContainedIn, target: spark1_master_vm}
+    properties:
+      monitoring: {enabled: true}
+  spark1:
+    type: dice.components.spark.Worker
+    relationships:
+    - {type: dice.relationships.ContainedIn, target: cluster1}
+    - {type: dice.relationships.spark.ConnectedToMaster, target: spark1_master}
+    properties:
+      monitoring: {enabled: true}
+  spark1_master_firewall:
+    type: dice.firewall_rules.spark.Master
+    properties: {}
+  spark1_firewall:
+    type: dice.firewall_rules.spark.Worker
+    properties: {}
+  spark1_master_vm:
+    type: dice.hosts.ubuntu.Medium
+    instances: {deploy: 1}
+    relationships:
+    - {type: dice.relationships.ProtectedBy, target: spark1_master_firewall}
+    - {type: dice.relationships.IPAvailableFrom, target: spark1_master_vm_ip}
+    properties: {}
+  spark1_master_vm_ip:
+    type: dice.VirtualIP
+    properties: {}
+  spark-wikistats:
+    type: dice.components.spark.Application
+    relationships:
+    - {type: dice.relationships.Needs, target: spark1}
+    - {type: dice.relationships.spark.SubmittedBy, target: spark1_master}
+    properties:
+      monitoring: {enabled: false}
+      args: [/home/wikistats-input.xml]
+      jar: http://localhost:8080/spark-wikistats.jar
+      class: it.polimi.deib.dice.spark.wikistats.Main
+      name: spark-wikistats
+
